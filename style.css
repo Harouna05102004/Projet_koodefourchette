@@ -1,0 +1,227 @@
+
+/*--- je dois faire des reglages de bases de la pages---*/
+body {
+  font-family: Arial, sans-serif; /*--- police du texte---*/
+  margin: 0; /*--- enleve les marges que le navigateur ajoute par defaut---*/
+  padding: 0;
+  background-color: #fff; /*--- je met un fond blanc pour toute la pages---*/
+}
+
+/*---on va modifier le HEADER---*/
+header {
+  background-color: #fff;
+  padding: 10px 40px; /*--- j'ajoute les marges a l'interieur du header---*/
+  display: flex; /*--- permet d'aligner les elements du header---*/
+  justify-content: space-between; /*--- il permet d'espacer les elément sur toute la largeur (logo etc...)---*/
+  align-items: center; /*--- aligner verticalement au centre---*/
+  flex-wrap: wrap; /*--- si l'ecran est petit les elements passe a la ligne---*/
+}
+
+/*--- bloc logo + barre de recherche ---*/
+.logo-search {
+  display: flex; /*--- aligne le logo sur la meme ligne---*/
+  align-items: center;
+  gap: 15px; /*---permet d'ajouter un espace entre eux---*/
+}
+
+.logo-search img {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-search form {
+  display: flex;
+  align-items: center;
+}
+
+.logo-search input {
+  padding: 10px;
+  border: 2px solid #ccc;
+  width: 250px;
+}
+
+.logo-search button {
+  background-color: #a50063;
+  color: white;
+  border: none;
+  padding: 7px 15px;
+  cursor: pointer;
+}
+
+/*---boutons utilisateur---*/
+.user-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.connect {
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 7px 15px;
+  cursor: pointer;
+}
+
+.account {
+  background-color: blue;
+  color: white;
+  border: none;
+  padding: 7px 15px;
+  cursor: pointer;
+}
+
+.but-rec {
+  background-color: violet;
+  color: white;
+  border: none;
+  padding: 7px 15px;
+  cursor: pointer;
+}
+
+.social-icons img {
+  margin-left: 8px;
+  width: 25px;
+}
+
+/*--- titre principal ---*/
+h1 {
+  font-family: 'Comic Sans MS', cursive, sans-serif; /* style rigolo et gourmand */
+  font-size: 36px; /* taille bien visible */
+  color: black; /* couleur du texte */
+  text-align: center; /* centré sur la page */
+  margin: 20px 0; /* espace autour du titre */
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2); /* ombre légère pour le relief */
+}
+
+/*--- barre de navigation ---*/
+nav {
+  display: flex; /*--- aligner les liens de navigations---*/
+  list-style: none;
+  justify-content: center; /*--- centrer le menu horizontalement---*/
+  margin: 0;
+  padding: 0;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.onglet-menu {
+  width: 100%;
+  background-color: #800046
+}
+nav li a {
+  background-color: #a50063; /* fond violet pour chaque lien */
+  color: white; /* texte blanc */
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 16px;
+  border-radius: 5px;
+  display: inline-block;
+  transition: background-color 0.2s ease-in-out;
+}
+
+nav li a:hover {
+  background-color: #800046;
+}
+
+/*--- image principale (soupe) ---*/
+main section:first-of-type img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  display: block;
+}
+
+/*--- titre de section ---*/
+h2 {
+  background-color: #a50063;
+  color: white;
+  padding: 10px 20px;
+  margin: 0;
+  text-align: center;
+}
+
+/*--- section des recettes du jour ---*/
+section:nth-of-type(2) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 30px;
+}
+
+section:nth-of-type(2) h2 {
+  /* j'ai donc aligné mon h2 horizontalement */
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/*--- bloc recette individuel ---*/
+article {
+  width: 280px;
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  padding: 15px;
+  text-align: center;
+}
+
+/*---- taille et positionnement des images de recette ---*/
+article img {
+  width: 100%;
+  height: 160px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+
+/*--- auteur de la recette + avatar ---*/
+.auteur_de_recette {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 14px;
+  font-style: italic;
+  color: #555;
+  margin-top: 10px;
+}
+
+.auteur_de_recette .avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+
+.marmelade_p{
+    background-color: green;
+}
+
+.pomme_p {
+  background-color: rgb(9, 78, 168);
+}
+
+.girolles_p {
+  background-color: #800046 ;
+}
+
+
+/*--- pied de page ---*/
+footer {
+  background-color: #000;
+  color: white;
+  text-align: center;
+  padding: 90px 0;
+  margin: 0;
+}

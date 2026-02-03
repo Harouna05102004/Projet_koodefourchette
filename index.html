@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!-- Indique au navigateur que ce document utilise le standard HTML5 -->
+
+<html lang="fr">
+<!-- Balise racine du document HTML, avec la langue définie sur le français -->
+
+<head>
+<!-- Section invisible du document, contenant les métadonnées et les liens vers les ressources -->
+  <meta charset="UTF-8">
+  <!-- Définit l'encodage des caractères en UTF-8 pour gérer correctement les accents et caractères spéciaux -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Permet un affichage responsive : le site s’adapte à la taille de l’écran (mobile, tablette, PC) -->
+
+  <title>Koo2fourchette</title>
+  <!-- Titre de la page affiché dans l’onglet du navigateur -->
+
+  <link rel="stylesheet" href="style.css">
+  <!-- Lien vers une feuille de style CSS externe pour personnaliser l’apparence du site -->
+</head>
+
+<body>
+<!-- Corps principal du site : tout ce qui est visible par l’utilisateur -->
+
+<header>
+<!-- En-tête du site, contenant le logo, la barre de recherche et les boutons de navigation -->
+
+  <div class="logo-search"> <!-- Bloc contenant le logo et la barre de recherche -->
+    <img src="images/koo_2_fourchette.png" alt="Logo Koo2fourchette">
+    <form> <!-- Formulaire de recherche -->
+      <input type="text" placeholder="rechercher une recette"> <!-- Champ de recherche -->
+      <button type="submit">OK</button> <!-- Bouton de validation -->
+    </form>
+  </div>
+
+  <div class="user-actions"> <!-- Bloc des actions utilisateur -->
+    <button class="connect">se connecter</button>
+    <button class="account">créer un compte</button>
+    <button class="but-rec">déposer une recette</button>
+
+    <div class="social-icons"> <!-- Icônes des réseaux sociaux -->
+      <img src="images/facebook.png" alt="Facebook">
+      <img src="images/twitter.png" alt="Twitter">
+      <img src="images/google.png" alt="Google+">
+      <img src="images/youtube.png" alt="YouTube">
+    </div>
+  </div>
+
+  <h1>miiam miam, gloup gloup, laps laps</h1> <!-- Slogan du site -->
+</header>
+
+<nav>
+<!-- Menu de navigation principal du site -->
+
+  <div class="onglet-menu"><ul>      
+    <li><a href="#">Recettes</a></li> <!-- Lien vers les recettes -->
+    <li><a href="#">Menus</a></li> <!-- Lien vers les menus -->
+    <li><a href="#">Deserts</a></li> <!-- Lien vers les desserts -->
+    <li><a href="#">Minceur</a></li> <!-- Lien vers les recettes légères -->
+    <li><a href="#">Atelier</a></li> <!-- Lien vers les ateliers -->
+    <li><a href="#">Contact</a></li> <!-- Lien vers la page de contact -->
+  </ul>
+  </div>
+</nav>
+
+<main>
+<!-- Section principale du contenu du site -->
+
+  <section>
+  <!-- Image mise en avant (soupe verte) -->
+    <img src="koo2fourchette (1)/photos/recettes/creme-petits-poids.jpg" alt="Soupe verte">
+  </section>
+
+  <section>
+  <!-- Section des recettes du jour -->
+    <h2>Recettes du jour</h2>
+
+    <article>
+      <img src="photos/recettes/marmelade-carottes.jpg" alt="Marmelade de carottes">
+      <h3>Marmelade de carottes</h3>
+      <p class="marmelade_p">Marmelade de carottes<br>Marmelade de carottes<br>Marmelade de carottes<br>Marmelade de carottes</p>
+      <p class="auteur_de_recette">
+        Proposé par Laure
+        <img class="avatar" src="photos/gravatars/laure.png" alt="Avatar de Laure">
+      </p>
+    </article>
+
+    <article>
+      <img src="photos/recettes/pomme-de-terre-aux-herbes.jpg" alt="Pommes de terre aux herbes">
+      <h3>Pommes de terres aux herbes</h3>
+      <p class="pomme_p">Pommes de terres aux herbes<br>Pommes de terres aux herbes<br>Pommes de terres aux herbes<br>Pommes de terre au herbes </p>
+      <p class="auteur_de_recette">
+        Proposé par Laurence
+        <img class="avatar" src="photos/gravatars/laurence.png" alt="Avatar de Laurence">
+      </p>
+    </article>
+
+    <article>
+      <img src="photos/recettes/girolles-paysanne.jpg" alt="Girolles à la paysanne">
+      <h3>Girolles à la paysanne</h3>
+      <p class="girolles_p">Girolles à la paysanne<br>Girolles à la paysanne<br>Girolles à la paysanne<br>Girolles à la paysanne</p>
+      <p class="auteur_de_recette">
+        Proposé par Annie
+        <img class="avatar" src="photos/gravatars/annie.png" alt="Avatar de Annie">
+      </p>
+    </article>
+
+  </section>
+</main>
+
+<footer>
+<!-- Pied de page du site -->
+  <p>&copy; 2025 Koo2fourchette. Tous droits réservés.</p>
+</footer>
+
+</body>
+</html>
