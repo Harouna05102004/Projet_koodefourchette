@@ -1,0 +1,435 @@
+/* ===== RESET & BASE ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --magenta:      #c0006e;
+  --magenta-dark: #a0005a;
+  --blue:         #0054a6;
+  --blue-light:   #5b9bd5;
+  --green-btn:    #6ab04c;
+  --text-dark:    #222;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: var(--text-dark);
+  background: #fff;
+}
+
+a { text-decoration: none; color: inherit; }
+img { display: block; }
+
+/* ===========================
+   HEADER
+=========================== */
+header { border-bottom: 3px solid var(--magenta); }
+
+.header-top {
+  display: flex;
+  align-items: flex-start;
+  padding: 10px 15px;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+/* --- LOGO --- */
+.logo-area { flex: 0 0 auto; }
+
+.logo img {
+  height: 70px;
+  width: auto;
+}
+
+.tagline {
+  font-style: italic;
+  color: #555;
+  font-size: 13px;
+  margin-top: 4px;
+  margin-left: 4px;
+}
+
+/* --- RECHERCHE --- */
+.search-area {
+  flex: 1;
+  min-width: 200px;
+  max-width: 380px;
+  margin-top: 20px;
+}
+
+.search-form { display: flex; }
+
+.search-form input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  outline: none;
+}
+
+.search-form button {
+  background: var(--magenta);
+  color: #fff;
+  border: none;
+  padding: 8px 18px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+.search-form button:hover { background: var(--magenta-dark); }
+
+/* --- AUTH AREA --- */
+.auth-area {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 7px;
+}
+
+/* Icônes sociales avec les vraies images */
+.social-icons {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.social-icon img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: opacity 0.2s;
+}
+.social-icon img:hover { opacity: 0.8; }
+
+/* Boutons connexion */
+.auth-buttons { display: flex; gap: 6px; }
+
+.btn-login {
+  background: var(--green-btn);
+  color: #fff;
+  padding: 8px 16px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  display: inline-block;
+}
+.btn-login:hover { background: #5a9a40; }
+
+.btn-register {
+  background: var(--blue);
+  color: #fff;
+  padding: 8px 16px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  display: inline-block;
+}
+.btn-register:hover { background: #004090; }
+
+.btn-deposer {
+  background: var(--magenta);
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+.btn-deposer:hover { background: var(--magenta-dark); }
+
+/* --- NAV --- */
+.main-nav {
+  display: flex;
+  background: #333;
+  overflow: hidden;
+}
+
+.nav-link {
+  flex: 1;
+  text-align: center;
+  padding: 14px 10px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border-right: 1px solid #555;
+  transition: background 0.2s;
+  text-transform: uppercase;
+}
+.nav-link:last-child { border-right: none; }
+.nav-link:hover,
+.nav-link.active { background: var(--magenta); }
+
+/* ===========================
+   HERO BANNER
+=========================== */
+.hero {
+  display: flex;
+  height: 300px;
+  overflow: hidden;
+}
+
+.hero-img {
+  flex: 0 0 660px;
+  overflow: hidden;
+}
+
+.hero-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-ads {
+  flex: 1;
+  display: flex;
+  gap: 2px;
+}
+
+.ad-block {
+  flex: 1;
+  background: #b0b0b0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.ad-blue { background: var(--blue); }
+
+/* ===========================
+   RECETTES DU JOUR
+=========================== */
+.recettes-jour { margin-bottom: 30px; }
+
+.section-title {
+  background: var(--magenta);
+  padding: 12px 20px;
+  margin-bottom: 15px;
+}
+
+.section-title h2 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* --- GRILLE DE CARTES --- */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  padding: 0 15px;
+}
+
+/* --- CARTE RECETTE --- */
+.recipe-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+.card-img {
+  height: 160px;
+  overflow: hidden;
+}
+
+.card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+.recipe-card:hover .card-img img { transform: scale(1.05); }
+
+.card-body { padding: 12px; flex: 1; }
+
+/* Couleurs des cartes selon la BDD */
+.card-yellow     { background: #e8ec5a; }
+.card-blue-light { background: #a8ccee; }
+.card-pink       { background: var(--magenta); }
+
+.card-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #333;
+}
+.card-pink .card-title { color: #fff; }
+
+.card-title a { color: inherit; }
+.card-title a:hover { text-decoration: underline; }
+
+.card-desc {
+  font-size: 12px;
+  color: #444;
+  line-height: 1.5;
+}
+.card-pink .card-desc { color: #f0d0e0; }
+
+/* --- AUTEUR --- */
+.card-author {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  background: #fff;
+  border-top: 1px solid #eee;
+  font-size: 12px;
+}
+
+.avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ddd;
+  flex-shrink: 0;
+}
+
+/* ===========================
+   PAGE DÉTAIL RECETTE - icônes
+=========================== */
+.meta-icon {
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  margin-right: 4px;
+  display: inline;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+footer {
+  background: #222;
+  color: #aaa;
+  text-align: center;
+  padding: 20px;
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+/* ===========================
+   FORMULAIRES (login, register, deposer)
+=========================== */
+.form-wrap {
+  max-width: 450px;
+  margin: 50px auto;
+  padding: 30px;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.12);
+}
+
+.form-wrap h2 {
+  color: var(--magenta);
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.form-group { margin-bottom: 14px; }
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  font-family: Arial, sans-serif;
+}
+
+.form-group textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.btn-submit {
+  background: var(--magenta);
+  color: #fff;
+  border: none;
+  padding: 12px 30px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  width: 100%;
+  margin-top: 5px;
+}
+.btn-submit:hover { background: var(--magenta-dark); }
+
+.msg-error {
+  background: #fdecea;
+  color: #c62828;
+  padding: 10px 14px;
+  margin-bottom: 15px;
+  font-size: 13px;
+  border-left: 4px solid #c62828;
+}
+
+.msg-success {
+  background: #e8f5e9;
+  color: #2e7d32;
+  padding: 10px 14px;
+  margin-bottom: 15px;
+  font-size: 13px;
+  border-left: 4px solid #4caf50;
+}
+.msg-success a { color: var(--magenta); font-weight: 700; }
+
+.msg-hint {
+  background: #e3f2fd;
+  padding: 10px 14px;
+  font-size: 12px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.link-alt {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 13px;
+}
+.link-alt a { color: var(--magenta); font-weight: 700; }
+
+.required { color: var(--magenta); }
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media (max-width: 768px) {
+  .hero { flex-direction: column; height: auto; }
+  .hero-img { flex: none; height: 200px; }
+  .hero-ads { height: 80px; }
+  .cards-grid { grid-template-columns: 1fr; }
+  .header-top { flex-direction: column; align-items: flex-start; }
+  .auth-area { align-items: flex-start; }
+  .form-row { grid-template-columns: 1fr; }
+}
